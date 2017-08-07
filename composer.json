@@ -1,0 +1,37 @@
+{
+    "name": "webreinvent/vaah",
+    "description": "Plugin Framework",
+    "type": "wordpress-plugin",
+    "autoload": {
+        "psr-4": {
+            "Vaah\\": "app"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pradeep Kumar",
+            "email": "webreinvent@gmail.com"
+        }
+    ],
+
+    "require": {
+        "illuminate/database": "*",
+        "robmorgan/phinx": "*",
+        "ixudra/curl": "*",
+        "illuminate/pagination": "^5.4",
+        "illuminate/encryption": "^5.4",
+        "illuminate/validation": "^5.4",
+        "illuminate/translation": "^5.4",
+        "illuminate/session": "^5.4",
+        "illuminate/hashing": "^5.4",
+        "illuminate/filesystem": "^5.4",
+        "illuminate/cookie": "^5.4",
+        "illuminate/http": "^5.4",
+        "illuminate/routing": "^5.4",
+        "illuminate/events": "^5.4",
+        "illuminate/broadcasting": "^5.4",
+        "illuminate/console": "^5.4",
+        "illuminate/view": "^5.4",
+        "vlucas/valitron": "*"
+    }
+}

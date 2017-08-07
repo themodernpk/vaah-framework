@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vaah Framework</title>
+</head>
+<body>
+
+<h1>Command</h1>
+
+<code>
+	cd F:\xampp56\htdocs\wp_crud\wp-content\plugins\vaah-framework
+</code>
+
+<code>
+	composer dump-autoload
+</code>
+
+<code>
+	vendor\bin\phinx init
+</code>
+<code>
+	vendor\bin\phinx create VaahTasks -c phinx-config.php --template=phinx-template.php.dist
+	vendor\bin\phinx create VaahCategories -c phinx-config.php --template=phinx-template.php.dist
+</code>
+<code>
+	vendor\bin\phinx migrate -c phinx-config.php
+</code>
+
+<code>
+	//rollback
+	vendor\bin\phinx rollback -c phinx-config.php
+	
+	//reset
+	vendor\bin\phinx rollback -c phinx-config.php -t 0
+</code>
+
+
+</body>
+</html>
