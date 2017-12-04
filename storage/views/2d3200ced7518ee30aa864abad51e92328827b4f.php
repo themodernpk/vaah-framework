@@ -1,6 +1,8 @@
 <?php echo e($testvar); ?>
 
 
+<h1>Testing</h1>
+
 <?php echo e(wp_enqueue_script( 'jquery-2', plugin_dir_url( __FILE__ ) . '../../assets/common/jquery.js')); ?>
 
 <?php echo e(wp_enqueue_script( 'bootstrap-js',  plugin_dir_url( __FILE__ ) . '../../assets/common/bootstrap.min.js', array('jquery-2') )); ?>
