@@ -1,16 +1,16 @@
 # Vaah Framework
 ##### If you love laravel you'll love this wordpress plugin framework too.
  
-WordPress is a great CMS, but lacks MVC. Then I tried Laravel an awesome php framework loved by many. Hence, thought to create a bridge between WordPress & Laravel without losing the flexibility of framework.
+WordPress is a great CMS, but lacks MVC. Then I tried Laravel an awesome php framework loved by many. Hence, thought to create a bridge between WordPress & Laravel without losing the flexibility of a framework.
 
-By installing this framework, you're actually install laravel as plugin and you control backend as well as the frontend of the plugin with no WordPress limitation.
+By installing this framework, you're actually install laravel as plugin and you'll be controlling the backend as well as the frontend of the plugin with no WordPress limitations.
  
- You'll able to use almost everything from laravel like ```routes```, ```controllers```, ```migrations```, ```models```, ```blade templates```  etc
+ You'll able to use almost everything similar to laravel like ```routes```, ```controllers```, ```migrations```, ```models```, ```blade templates```  etc
 
  ## Setup
  
  #### Step 1
- Create a folder in ```vaah-framework``` in your wordpress plugins folder or clone this repository in your plugins folder.
+ Create a folder as ```vaah-framework``` in your WordPress plugins folder or clone this repository in your plugins folder.
  
 #### Step 2
   Run ```composer install``` to install all plugin dependencies. Then run ```composer dump-autoload```
@@ -22,12 +22,12 @@ By installing this framework, you're actually install laravel as plugin and you 
 ## Migrations
 
 ### Initialize the migrations
-Use any command line tool and navigate to plugin folder and run ```vendor\bin\phinx init```. Phinx is being used to manage migrations.
+Use any command line tool and navigate to Vaah plugins folder and run ```vendor\bin\phinx init```. Phinx is being used to manage migrations.
 
 ### Create migrations
 Run ```vendor\bin\phinx create <table name> -c phinx-config.php --template=phinx-template.php.dist```, this will create a migration file under ```app/Migration/db``` folder.
 
-Below is sample migration file. You may consider to read Phinx documentation to create these migration files.
+Below is sample migration file. You may consider to read Phinx documentation to create these migration files. These are almost similar to laravel migration files.
 
 ```php
 use \Vaah\Migration\Migration;
@@ -65,3 +65,4 @@ Use command ```rollback
 
 ### Reset Migrations
 Use command ```vendor\bin\phinx rollback -c phinx-config.php -t 0```
+
