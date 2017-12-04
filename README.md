@@ -13,7 +13,16 @@ By installing this framework, you're actually install laravel as plugin and you'
  Create a folder as ```vaah-framework``` in your WordPress plugins folder or clone this repository in your plugins folder.
  
 #### Step 2
-  Run ```composer install``` to install all plugin dependencies. Then run ```composer dump-autoload```
+  Run following command to install all plugin dependencies.
+  
+   ```bash
+   composer install
+   ```
+  Then Run
+ ```bash
+ composer dump-autoload
+ ```
+
 
 #### Step 3
   Login to your WordPress admin > plugins and activate Vaah Framework. And plugin is ready for development. 
@@ -22,10 +31,21 @@ By installing this framework, you're actually install laravel as plugin and you'
 ## Migrations
 
 ### Initialize the migrations
-Use any command line tool and navigate to Vaah plugins folder and run ```vendor\bin\phinx init```. Phinx is being used to manage migrations.
+Use any command line tool and navigate to Vaah plugins folder and run:
+
+ ```bash
+ vendor\bin\phinx init
+ ```
+Phinx is being used to manage migrations.
 
 ### Create migrations
-Run ```vendor\bin\phinx create <table name> -c phinx-config.php --template=phinx-template.php.dist```, this will create a migration file under ```app/Migration/db``` folder.
+Run
+
+ ```bash
+ vendor\bin\phinx init
+ ```
+ Rhis will create a migration file under ```app/Migration/db``` folder.
+
 
 Below is sample migration file. You may consider to read Phinx documentation to create these migration files. These are almost similar to laravel migration files.
 
@@ -57,12 +77,26 @@ class VaahTasks extends Migration
 ```
 
 ### Run Migrations
-Use command ```vendor\bin\phinx migrate -c phinx-config.php``` to migrate.
+Use following command to ```run``` migrations:
+
+ ```bash
+vendor\bin\phinx migrate -c phinx-config.php
+ ```
+
 
 ### Rollback Migrations
-Use command ```rollback
-               	vendor\bin\phinx rollback -c phinx-config.php```
+Use following command to ```rollback``` migrations:
+               	
+ ```bash
+vendor\bin\phinx migrate -c phinx-config.php
+ ```
 
 ### Reset Migrations
-Use command ```vendor\bin\phinx rollback -c phinx-config.php -t 0```
 
+Use following command to ```reset``` migrations:
+               	
+ ```bash
+vendor\bin\phinx rollback -c phinx-config.php -t 0
+ ```
+ 
+ 
