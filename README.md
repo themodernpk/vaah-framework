@@ -44,7 +44,7 @@ Run
  ```bash
  vendor\bin\phinx init
  ```
- Rhis will create a migration file under ```app/Migration/db``` folder.
+ This will create a migration file under ```app/Migration/db``` folder.
 
 
 Below is sample migration file. You may consider to read Phinx documentation to create these migration files. These are almost similar to laravel migration files.
@@ -99,4 +99,5 @@ Use following command to ```reset``` migrations:
 vendor\bin\phinx rollback -c phinx-config.php -t 0
  ```
  
+ ##### remaining documentation will be updated soon...
  
