@@ -10,7 +10,7 @@ By installing this framework, you're actually install laravel as plugin and you'
  ## Setup
  
  #### Step 1
- Create a folder as ```vaah-framework``` in your WordPress plugins folder or clone this repository in your plugins folder.
+ Create a folder as ```vaah-framework``` in your WordPress plugins folder extract this repository in the folder or clone this repository in your plugins folder.
  
 #### Step 2
   Run following command to install all plugin dependencies.
