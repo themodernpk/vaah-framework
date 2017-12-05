@@ -42,7 +42,7 @@ Phinx is being used to manage migrations.
 Run
 
  ```bash
- vendor\bin\phinx init
+ vendor\bin\phinx create <table name> -c phinx-config.php --template=phinx-template.php.dist
  ```
  This will create a migration file under ```app/Migration/db``` folder.
 
