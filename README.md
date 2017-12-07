@@ -88,7 +88,7 @@ vendor\bin\phinx migrate -c phinx-config.php
 Use following command to ```rollback``` migrations:
                	
  ```bash
-vendor\bin\phinx migrate -c phinx-config.php
+vendor\bin\phinx rollback -c phinx-config.php
  ```
 
 ### Reset Migrations
