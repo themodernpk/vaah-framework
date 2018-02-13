@@ -10,14 +10,35 @@ class Routes
     {
         $list = array(
 
-            [   'page_title'     => 'Vaah Index Page',
-                'menu_title'    =>'Vaah',
-                'menu_slug'    =>'vaah-index',
-                'capabilities'    =>'manage_options',
-                'callback'  =>'\Vaah\Controllers\BackendController::index'
+            [
+                'page_title'    => 'Vaah Index Page',
+                'menu_title'    => 'Vaah',
+                'menu_slug'     => 'vaah-index',
+                'capabilities'  => 'manage_options',
+                'callback'      => '\Vaah\Controllers\BackendController::index',
+                'sub_menus'     =>
+                    [
+
+                        [
+                            'page_title'    => 'Sub Menu 1',
+                            'menu_title'    => 'Sub Menu 1',
+                            'menu_slug'     => 'sub-menu-1',
+                            'capabilities'  => 'manage_options',
+                            'callback'      => '\Vaah\Controllers\BackendController::index',
+                        ],
+                        [
+                            'page_title'    => 'Sub Menu 2',
+                            'menu_title'    => 'Sub Menu 2',
+                            'menu_slug'     => 'sub-menu-2',
+                            'capabilities'  => 'manage_options',
+                            'callback'      => '\Vaah\Controllers\BackendController::index',
+                        ]
+
+                    ]
             ],
 
-            [   'page_title'     => 'Vaah Edit',
+            [
+                'page_title'     => 'Vaah Edit',
                 'menu_title'    =>'Vaah Edit',
                 'menu_slug'    =>'vaah-edit',
                 'capabilities'    =>'manage_options',
@@ -29,6 +50,10 @@ class Routes
         return $list;
     }
     //----------------------------------------------------------------------------------
+    /*
+     * these are frontend restful url
+     * path will be <base-url>/wp-json/vaah/<route-name>
+     */
     public static function frontEndRoutes()
     {
         $list = array(

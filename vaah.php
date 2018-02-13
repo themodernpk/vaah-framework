@@ -7,10 +7,11 @@
   Author URI: https://www.webreinvent.com
  */
 require "vendor/autoload.php";
-include(ABSPATH . '/wp-config.php');
-include(ABSPATH . '/wp-load.php');
-include(ABSPATH . "wp-includes/pluggable.php");
-include(ABSPATH . "wp-admin/includes/user.php");
+
+include_once(ABSPATH . '/wp-config.php');
+include_once(ABSPATH . '/wp-load.php');
+include_once(ABSPATH . "wp-includes/pluggable.php");
+include_once(ABSPATH . "wp-admin/includes/user.php");
 require "config/database.php";
 
 use Illuminate\Database\Capsule\Manager as Capsule;
@@ -18,6 +19,7 @@ use Illuminate\Events\Dispatcher;
 use Illuminate\Container\Container;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
+
 
 $capsule = new Capsule;
 

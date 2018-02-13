@@ -64,8 +64,13 @@ class FrontendController {
     //------------------------------------------------------
     public function test_short_code()
     {
+
         $r = VaahHelper::ViewLoader('/frontend/short-codes/test.blade.php', array('testvar' => ' timestamp: '.time()) );
         echo $r->render();
+
+
+
+
     }
     //------------------------------------------------------
     //------------------------------------------------------

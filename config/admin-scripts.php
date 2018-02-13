@@ -17,6 +17,8 @@ function vaah_scripts() {
     wp_enqueue_script( 'vue-pagination-js',  plugin_dir_url( __FILE__ ) . '../assets/common/VuePagination.js' );
 
 
+
+
     //admin css
     wp_enqueue_style( 'bootstrap-css',  plugin_dir_url( __FILE__ ) . '../assets/common/bootstrap.min.css' );
     wp_enqueue_style( 'vaah-admin-css',  plugin_dir_url( __FILE__ ) . '../assets/common/vaah.admin.css' );
