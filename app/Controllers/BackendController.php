@@ -9,7 +9,7 @@ use Vaah\Libraries\VaahHelper as VaahHelper;
 class BackendController{
 
     //------------------------------------------------------
-    public function index()
+    public static function index()
     {
         // create a template
         $r = VaahHelper::ViewLoader('/backend/index.blade.php', array('testvar' => ' timestamp: '.time()) );

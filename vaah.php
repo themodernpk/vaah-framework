@@ -26,7 +26,7 @@ $capsule = new Capsule;
 $db = [
     'driver' => 'mysql',
     'host' => DB_HOST,
-    'port' => DB_PORT,
+    //'port' => DB_PORT,
     'database' => DB_NAME,
     'username' => DB_USER,
     'password' => DB_PASSWORD,
@@ -40,9 +40,14 @@ $capsule->setEventDispatcher(new Dispatcher(new Container));
 
 //Set Pagination Variable
 $inputs = Request::capture()->all();
-Paginator::currentPageResolver(function () use ($inputs) {
-    return $inputs['page'];
-});
+
+if(isset($inputs['page']))
+{
+    Paginator::currentPageResolver(function () use ($inputs) {
+        return $inputs['page'];
+    });
+}
+
 
 // Make this Capsule instance available globally via static methods... (optional)
 $capsule->setAsGlobal();

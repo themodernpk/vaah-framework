@@ -15,7 +15,7 @@ use Vaah\Models\Task;
 class FrontendController {
 
     //------------------------------------------------------
-    public function index()
+    public static function index(Request $request)
     {
 
 
@@ -25,7 +25,7 @@ class FrontendController {
     }
 
     //------------------------------------------------------
-    public function taskList()
+    public static  function taskList()
     {
 
 
@@ -40,7 +40,7 @@ class FrontendController {
         return $response;
     }
     //------------------------------------------------------
-    public function taskCreate()
+    public static  function taskCreate()
     {
 
         $inputs = VaahHelper::Inputs();
@@ -62,7 +62,7 @@ class FrontendController {
         return $response;
     }
     //------------------------------------------------------
-    public function test_short_code()
+    public static  function test_short_code()
     {
 
         $r = VaahHelper::ViewLoader('/frontend/short-codes/test.blade.php', array('testvar' => ' timestamp: '.time()) );
