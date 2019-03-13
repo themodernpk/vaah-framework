@@ -5,7 +5,9 @@
     <!--header-->
     <div class="row">
         <div class="col-md-12">
-            <h3 class="pull-left">Tasks <a href="#" data-toggle="modal" data-target="#EmailChangeLabelModal" class="btn btn-info btn-sm">Add</a></h3>
+            <h3 class="pull-left">Tasks
+                <a href="#" data-toggle="modal" data-target="#EmailChangeLabelModal"
+                   class="btn btn-info btn-sm">Add</a></h3>
 
         </div>
     </div>
@@ -64,7 +66,9 @@
         <div class="col-md-12">
 
 
-            <input class="form-control" v-model="new_item.name" v-on:keyup.enter="create($event)" /><br/>
+            <input class="form-control" v-model="new_item.name"
+                   placeholder="create task"
+                   v-on:keyup.enter="create($event)" /><br/>
 
 
             <table class="table table-bordered table-striped">

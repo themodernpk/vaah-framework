@@ -12,6 +12,8 @@ include_once(ABSPATH . '/wp-config.php');
 include_once(ABSPATH . '/wp-load.php');
 include_once(ABSPATH . "wp-includes/pluggable.php");
 include_once(ABSPATH . "wp-admin/includes/user.php");
+
+
 require "config/database.php";
 
 use Illuminate\Database\Capsule\Manager as Capsule;
@@ -19,6 +21,8 @@ use Illuminate\Events\Dispatcher;
 use Illuminate\Container\Container;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
+use Illuminate\View\ViewServiceProvider;
+use Illuminate\Html\HtmlServiceProvider;
 
 
 $capsule = new Capsule;
@@ -40,6 +44,9 @@ $capsule->setEventDispatcher(new Dispatcher(new Container));
 
 //Set Pagination Variable
 $inputs = Request::capture()->all();
+
+
+
 
 if(isset($inputs['page']))
 {

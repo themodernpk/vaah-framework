@@ -1,6 +1,19 @@
-{{ $testvar }}
+<h1>Task List</h1>
 
-<h1>Testing</h1>
+<table>
+
+    @foreach($list as $item)
+    <tr>
+        <td>{{$item->name}}</td>
+    </tr>
+    @endforeach
+
+
+
+</table>
+
+
+
 
 {{ wp_enqueue_script( 'jquery-2', plugin_dir_url( __FILE__ ) . '../../assets/common/jquery.js') }}
 {{ wp_enqueue_script( 'bootstrap-js',  plugin_dir_url( __FILE__ ) . '../../assets/common/bootstrap.min.js', array('jquery-2') ) }}

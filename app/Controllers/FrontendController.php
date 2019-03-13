@@ -64,12 +64,14 @@ class FrontendController {
     //------------------------------------------------------
     public static  function test_short_code()
     {
+        $list = Task::paginate(2);
 
-        $r = VaahHelper::ViewLoader('/frontend/short-codes/test.blade.php', array('testvar' => ' timestamp: '.time()) );
+
+
+        $r = VaahHelper::ViewLoader('/frontend/short-codes/test.blade.php',
+            array('list' => $list) );
+
         echo $r->render();
-
-
-
 
     }
     //------------------------------------------------------
