@@ -27,11 +27,12 @@ class FrontendController {
     //------------------------------------------------------
     public static  function taskList()
     {
+        $perPage = 2; // results per page
+        $columns = ['*']; // (optional, defaults to *) array of columns to retrieve from database
+        $pageName = 'page_number';
 
 
-
-
-        $list = Task::orderBy('id', 'DESC')->paginate(3);
+        $list = Task::orderBy('id', 'DESC')->paginate($perPage, $columns, $pageName);
 
         $response['status'] = 'success';
         $response['data']['list']= $list;

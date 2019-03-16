@@ -53,7 +53,6 @@ Paginator::viewFactoryResolver(function () use ($viewFactory) {
 $pageName = 'page_number';
 
 
-
 // Set up a current path resolver so the paginator can generate proper links
 Paginator::currentPathResolver(function () {
     return isset($_SERVER['REQUEST_URI']) ? strtok($_SERVER['REQUEST_URI'], '?') : '/';

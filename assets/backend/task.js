@@ -34,8 +34,13 @@ const app = new VueCommon({
         //----------------------------------------------------------
         listLoader: function () {
             var url = this.urls.rest+"/task/list";
-            var params = {page: this.current_page};
-            console.log(params);
+            var params = {};
+
+            if(this.current_page)
+            {
+                url = url+"?page_number="+this.current_page;
+            }
+
             this.processHttpRequest(url, params, this.listLoaderAfter);
         },
         //----------------------------------------------------------
@@ -47,6 +52,9 @@ const app = new VueCommon({
                 this.errors = response.errors;
             } else
             {
+
+                console.log(response);
+
                 this.list = response.data.list.data;
                 this.total_records = response.data.list.total;
                 this.current_page = response.data.list.current_page;
