@@ -5,9 +5,18 @@ use $useClassName;
 class $className extends $baseClassName
 {
 
+    /**
+     *
+     * Read More information on writing migrations column type
+     * is available here:
+     * https://laravel.com/docs/5.8/migrations#columns
+     * http://docs.phinx.org/en/latest/migrations.html
+     *
+     */
+
     public function up()
     {
-        $this->schema->create('vaah_table', function(Illuminate\Database\Schema\Blueprint $table){
+        $this->schema->create('vaah_table_name', function(Illuminate\Database\Schema\Blueprint $table){
             // Auto-increment id
             $table->increments('id');
             $table->string('name')->nullable();
@@ -19,7 +28,9 @@ class $className extends $baseClassName
 
     public function down()
     {
-        $this->schema->drop('vaah_table');
+        $this->schema->drop('vaah_table_name');
     }
+
+    //-----------------------------------------------------
 
 }

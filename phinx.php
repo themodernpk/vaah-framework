@@ -3,7 +3,8 @@ require "config/database.php";
 
 return [
     'paths' => [
-        'migrations' => 'app/Migration/db'
+        'migrations' => 'app/Migration/db',
+        'template'  => 'phinx-template.php.dist'
     ],
     'migration_base_class' => '\Vaah\Migration\Migration',
     'environments' => [
@@ -15,7 +16,6 @@ return [
             'name' => DB_NAME,
             'user' => DB_USER,
             'pass' => DB_PASSWORD,
-            'port' => DB_PORT
         ]
     ]
 ];

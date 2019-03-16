@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__.'../../../../wp-config.php');
+require "config/database.php";
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Events\Dispatcher;

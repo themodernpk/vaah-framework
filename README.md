@@ -42,7 +42,7 @@ Phinx is being used to manage migrations.
 Run
 
  ```bash
- vendor\bin\phinx create <table name> -c phinx-config.php --template=phinx-template.php.dist
+ php vaah create tableName --template=phinx-template.php.dist
  ```
  This will create a migration file under ```app/Migration/db``` folder.
 
@@ -80,7 +80,7 @@ class VaahTasks extends Migration
 Use following command to ```run``` migrations:
 
  ```bash
-vendor\bin\phinx migrate -c phinx-config.php
+php vaah migrate
  ```
 
 
@@ -88,7 +88,7 @@ vendor\bin\phinx migrate -c phinx-config.php
 Use following command to ```rollback``` migrations:
                	
  ```bash
-vendor\bin\phinx rollback -c phinx-config.php
+php vaah rollback
  ```
 
 ### Reset Migrations
@@ -96,7 +96,7 @@ vendor\bin\phinx rollback -c phinx-config.php
 Use following command to ```reset``` migrations:
                	
  ```bash
-vendor\bin\phinx rollback -c phinx-config.php -t 0
+php vaah rollback -t 0
  ```
  
  ##### remaining documentation will be updated soon...
