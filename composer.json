@@ -35,6 +35,9 @@
         "illuminate/broadcasting": "*",
         "illuminate/console": "*",
         "illuminate/view": "*",
-        "vlucas/valitron": "*"
+        "vlucas/valitron": "*",
+        "slim/slim": "*",
+        "zeuxisoo/slim-whoops": "*",
+        "filp/whoops": "*"
     }
 }

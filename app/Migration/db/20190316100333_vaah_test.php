@@ -1,10 +1,10 @@
 <?php
 
+
 use \Vaah\Migration\Migration;
 
-class VaahCategories extends Migration
+class VaahTest extends Migration
 {
-
     /**
      * Change Method.
      *
@@ -30,22 +30,8 @@ class VaahCategories extends Migration
      * Remember to call "create()" or "update()" and NOT "save()" when working
      * with the Table class.
      */
-
-    public function up()
+    public function change()
     {
-        $this->schema->create('vaah_categories', function(Illuminate\Database\Schema\Blueprint $table){
-            // Auto-increment id
-            $table->increments('id');
-            $table->string('name')->nullable();
-            $table->timestamps();
-        });
+
     }
-
-    //-----------------------------------------------------
-
-    public function down()
-    {
-        $this->schema->drop('vaah_categories');
-    }
-
 }

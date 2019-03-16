@@ -13,6 +13,20 @@ include_once(ABSPATH . '/wp-load.php');
 include_once(ABSPATH . "wp-includes/pluggable.php");
 include_once(ABSPATH . "wp-admin/includes/user.php");
 
+/*
+function vaah_register_query_vars( $vars ) {
+    $vars[] = 'page';
+    return $vars;
+}
+add_filter( 'query_vars', 'vaah_register_query_vars' );
+
+$key = get_query_var( 'paged' );
+
+echo "<pre>";
+print_r($key);
+echo "</pre>";
+die("<hr/>line number=123");*/
+
 // Load admin scripts
 include_once ('bootstrap.php');
 
@@ -30,3 +44,4 @@ include_once ('config/short-codes.php');
 
 // Register Wordpress Routes
 include_once ('config/register-routes.php');
+

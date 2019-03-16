@@ -9,6 +9,7 @@
     @endforeach
 
 
+    {{ $list->appends($_GET)->links('pagination') }}
 
 </table>
 

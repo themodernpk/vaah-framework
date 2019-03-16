@@ -62,10 +62,16 @@ class FrontendController {
         return $response;
     }
     //------------------------------------------------------
-    public static  function test_short_code()
+    public static function test_short_code()
     {
-        $list = Task::paginate(2);
 
+
+        $perPage = 2; // results per page
+        $columns = ['*']; // (optional, defaults to *) array of columns to retrieve from database
+        $pageName = 'page_number';
+
+
+        $list = Task::paginate($perPage, $columns, $pageName);
 
 
         $r = VaahHelper::ViewLoader('/frontend/short-codes/test.blade.php',
